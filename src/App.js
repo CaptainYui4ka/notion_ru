@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import Album from './components/Album';
 import Sidebar from './components/Sidebar';
-import './App.css';
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () =>{
   const [documents, setDocuments] = useState([
@@ -17,6 +21,9 @@ const App = () =>{
 
   return(
     <div className='app'>
+      <Header />
+      <Banner />
+      <Album />
       <Sidebar documents={documents} onSelect={handleSelect}/>
       <div className='content'>
         {selectedDoc ? (
