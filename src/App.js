@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import Sidebar from './components/Sidebar';
+<<<<<<< Updated upstream
 import './App.css';
+=======
+import './App.css'
+import Footer from  './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+>>>>>>> Stashed changes
 
 const App = () =>{
   const [documents, setDocuments] = useState([
@@ -16,7 +22,14 @@ const App = () =>{
   };
 
   return(
+<<<<<<< Updated upstream
     <div className='app'>
+=======
+    <div className='App'>
+      <Header />
+      <Banner />
+      <Album />
+>>>>>>> Stashed changes
       <Sidebar documents={documents} onSelect={handleSelect}/>
       <div className='content'>
         {selectedDoc ? (
@@ -25,6 +38,7 @@ const App = () =>{
           <p>Select or create a new document</p>
         )}
       </div>
+      <Footer />
     </div>
   );
 };
